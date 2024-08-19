@@ -50,33 +50,22 @@ function melasistema_timeline_shortcode($atts = '') {
 
 	ob_start(); ?>
 
-		<section class="cd-timeline js-cd-timeline">
-			<div class="container max-width-lg cd-timeline__container">
+    <div class="timeline">
 
-				<?php foreach($timelines as $timeline) { ?>
+		<?php foreach($timelines as $index => $timeline) {
+			$alignment = ($index % 2 == 0) ? 'left' : 'right';
+			$titleAlignment = ($index % 2 == 0) ? 'title-align-right' : 'title-align-left'; ?>
 
-					<?php write_log($timeline); ?>
+            <div class="container <?php echo $alignment; ?>">
+                <div class="content">
+                    <h2 class="<?php echo $titleAlignment; ?>"><?php echo $timeline->post_title; ?></h2>
+                    <p><?php echo $timeline->post_content; ?></p>
+                </div>
+            </div>
 
-					<div class="cd-timeline__block">
-				        <div class="cd-timeline__img ccd-timeline__img--none">
-				          <!-- <img src="<?php echo plugin_dir_url( dirname( __FILE__ ) ); ?>/assets/img/cd-icon-picture.svg" alt="Picture"> -->
-				        </div> <!-- cd-timeline__img -->
+		<?php } ?>
 
-				        <div class="cd-timeline__content text-component">
-				          <h2><?php echo $timeline->post_title; ?></h2>
-				          <p class="color-contrast-medium"><?php echo $timeline->post_content; ?></p>
-
-				          <div class="flex justify-between items-center">
-				            <!-- <span class="cd-timeline__date">Jan 14</span> -->
-				            <!-- <a href="#0" class="btn btn--subtle">Read more</a> -->
-				          </div>
-				        </div> <!-- cd-timeline__content -->
-				      </div> <!-- cd-timeline__block -->
-
-				<?php } ?>
-
-			</div>
-		</section> <!-- cd-timeline -->
+    </div>
 
 	<?php $content .= ob_get_clean();
 
