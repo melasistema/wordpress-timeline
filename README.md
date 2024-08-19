@@ -24,4 +24,6 @@ Questo plugin è distribuito sotto i termini della licenza GPLv2 o successiva (G
 
 ## Screenshots
 
-// TODO: Screenshots
+![Timeline Desktop view](screenshots/01-melasistema-timeline-desktop.jpg)
+
+![Timeline Mobile view](screenshots/02-melasistema-timeline-mobile.jpg)
