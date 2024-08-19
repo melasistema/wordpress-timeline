@@ -1,5 +1,9 @@
 (function(){
-
+	/**
+	 * Vertical Timeline - Thanks to CodyHouse.co
+	 * @param element
+	 * @constructor
+	 */
 	function VerticalTimeline( element ) {
 		this.element = element;
 		this.blocks = this.element.getElementsByClassName("container");
@@ -8,28 +12,19 @@
 		this.hideBlocks();
 	};
 
-	/*VerticalTimeline.prototype.hideBlocks = function() {
-		if ( !"classList" in document.documentElement ) {
-			return; // no animation on older browsers
-		}
-		//hide timeline blocks which are outside the viewport
-		var self = this;
-		for( var i = 0; i < this.blocks.length; i++) {
-			(function(i){
-				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
-					self.contents[i].classList.add("cd-timeline__content--hidden");
-				}
-			})(i);
-		}
-	};*/
-
+	/**
+	 * hide timeline blocks which are outside the viewport
+	 */
 	VerticalTimeline.prototype.hideBlocks = function() {
 		if ( !"classList" in document.documentElement ) {
-			return; // no animation on older browsers
+			return; // check if classList is supported
 		}
-		//hide timeline blocks which are outside the viewport
-		var self = this;
-		for( var i = 0; i < this.blocks.length; i++) {
+		/**
+		 * Add the slide-in animation to the blocks
+		 * @type {VerticalTimeline}
+		 */
+		let self = this;
+		for( let i = 0; i < this.blocks.length; i++) {
 			(function(i){
 				if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
 					self.contents[i].classList.add("cd-timeline__content--hidden");
@@ -45,6 +40,9 @@
 		}
 	};
 
+	/**
+	 * Show timeline blocks when scrolling
+	 */
 	VerticalTimeline.prototype.showBlocks = function() {
 		if ( ! "classList" in document.documentElement ) {
 			return;
@@ -68,17 +66,19 @@
 		}
 	};
 
-	var verticalTimelines = document.getElementsByClassName("timeline"),
+	let verticalTimelines = document.getElementsByClassName("timeline"),
 		verticalTimelinesArray = [],
 		scrolling = false;
 	if( verticalTimelines.length > 0 ) {
-		for( var i = 0; i < verticalTimelines.length; i++) {
+		for( let i = 0; i < verticalTimelines.length; i++) {
 			(function(i){
 				verticalTimelinesArray.push(new VerticalTimeline(verticalTimelines[i]));
 			})(i);
 		}
 
-		//show timeline blocks on scrolling
+		/**
+		 * Check if a timeline block is in the viewport
+		 */
 		window.addEventListener("scroll", function(event) {
 			if( !scrolling ) {
 				scrolling = true;
@@ -87,12 +87,14 @@
 		});
 	}
 
+	/**
+	 * Check if the timeline blocks are in the viewport
+	 */
 	function checkTimelineScroll() {
 		verticalTimelinesArray.forEach(function(timeline){
 			timeline.showBlocks();
 		});
 		scrolling = false;
 	};
-
 
 })();
