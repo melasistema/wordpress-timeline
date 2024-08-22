@@ -1,26 +1,26 @@
 # Timeline - WordPress Plugin
 
-Questo plugin per [Wordpress](https://github.com/WordPress/WordPress) offre una semplice timeline verticale, visivamente accattivante e interattiva per il tuo sito web. Ti permette di mostrare eventi storici, processi o sequenze in ordine cronologico. La timeline è completamente responsive, garantendo un'esperienza utente fluida su tutti i dispositivi.
+This plugin for [WordPress](https://github.com/WordPress/WordPress) provides a simple vertical timeline, visually appealing and interactive for your website. It allows you to display historical events, processes or sequences in chronological order. The timeline is fully responsive, ensuring a smooth user experience on all devices.
 
-## Funzionalità principali
+## Main Features
 
-* **Timeline Verticale:** Presenta i tuoi eventi in un formato verticale che facilita la navigazione e la comprensione.
-* **Responsive:** La timeline si adatta automaticamente a qualsiasi dimensione dello schermo, garantendo un'esperienza utente ottimale su tutti i dispositivi.
+* **Vertical Timeline:** Present your events in a vertical format that facilitates navigation and understanding.
+* **Responsive:** The timeline automatically adapts to any screen size, ensuring an optimal user experience on all devices.
 
-## Installazione
+## Installation
 
-1. **Scaricare il plugin:** Clona o scarica il repository del plugin tramite Git.
-2. **Posizionamento nella cartella plugin di WordPress:** Sposta le cartelle del plugin nella directory wp-content/plugins del tuo progetto WordPress.
-3. **Attivazione del plugin:** Vai su Plugin nella tua bacheca di amministrazione WordPress e attiva il plugin "Timeline".
+1. **Download the plugin:** Clone or download the plugin repository via Git.
+2. **Positioning in the WordPress plugin folder:** Move the plugin folders to the wp-content/plugins directory of your WordPress project.
+3. **Activation of the plugin:** Go to Plugins in your WordPress administration dashboard and activate the "Timeline" plugin.
 
-## Utilizzo
+## Usage
 
-* **Creazione della Timeline:** Aggiungi eventi alla tua timeline inserendo l'anno nel post_title e la descrizione corrispondente.
-* **Aggiungi shortcode:** Usa lo shortcode **[melasistema-timeline]** per visualizzare la tua timeline in una pagina o post.
+* **Creating the Timeline:** Add events to your timeline by entering the year in the post_title and the corresponding description.
+* **Add shortcode:** Use the shortcode **[melasistema-timeline]** to display your timeline on a page or post.
 
-## Licenza
+## License
 
-Questo plugin è distribuito sotto i termini della licenza GPLv2 o successiva (GPL). Puoi trovare maggiori dettagli sulla [LICENSE](http://www.gnu.org/licenses/gpl-2.0.html).
+This plugin is distributed under the terms of the GPLv2 or later (GPL) license. You can find more details on the [LICENSE](http://www.gnu.org/licenses/gpl-2.0.html).
 
 ## Screenshots
 
